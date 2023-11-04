@@ -7,6 +7,18 @@
     @apply bg-background text-text;
   }
   h1 {
-    @apply text-primary;
+    @apply text-3xl text-primary;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  p {
+    @apply text-base;
+  }
+}
+
+@layer components {
+  .sidebar {
+    @apply fixed bg-secondary/80 h-screen backdrop-blur-lg;
   }
 }

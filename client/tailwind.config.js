@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+
+const ika_theme = {
+  text: "#FFFFFF",
+  background: "#000000",
+  primary: "#45a6ff",
+  secondary: "#08324b",
+  accent: "#f4fc0e",
+};
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      text: "#000000",
-      background: "#FFFFFF",
-      primary: "#45a6ff",
-      secondary: "#08324b",
-      accent: "#f4fc0e",
-    },
+    colors: ika_theme,
     fontSize: {
       sm: "0.750rem",
       base: " 1rem",
@@ -27,5 +30,12 @@ export default {
       bold: "700",
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        ika_theme,
+      },
+    ],
+  },
+  plugins: [require("daisyui")],
 };
