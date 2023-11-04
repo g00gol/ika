@@ -50,6 +50,7 @@ Middle East & North Africa,Sudan
 Africa,Swaziland
 Sub-Saharan Africa,Tanzania
 Sub-Saharan Africa,Togo
+Sub-Saharan Africa,Cote d'Ivoire
 Middle East & North Africa,Tunisia
 Sub-Saharan Africa,Uganda
 Sub-Saharan Africa,Zambia
@@ -59,7 +60,7 @@ Middle East & North Africa,Bahrain
 Asia (excl. China and India),Bangladesh
 Asia (excl. China and India),Bhutan
 Asia (excl. China and India),Brunei
-Asia (excl. China and India),Burma (Myanmar)
+Asia (excl. China and India),Myanmar
 Asia (excl. China and India),Cambodia
 China,China
 Asia (excl. China and India),East Timor
@@ -166,9 +167,10 @@ Americas (excl. USA),Nicaragua
 Americas (excl. USA),Panama
 Americas (excl. USA),Saint Kitts and Nevis
 Americas (excl. USA),Saint Lucia
+Americas (excl. USA),Puerto Rico
 Americas (excl. USA),Saint Vincent and the Grenadines
 Americas (excl. USA),Trinidad and Tobago
-United States,US
+United States,USA
 Oceania,Australia
 Oceania,Fiji
 Oceania,Kiribati
