@@ -1,31 +1,18 @@
-import Sidebar from "./components/Sidebar";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Routes, Route } from "react-router-dom";
+
 import "mapbox-gl/dist/mapbox-gl.css";
-import Mapbox from "./components/mapbox/Mapbox";
+
+import SimulatorPage from "./pages/simulator/page";
+import ErrorPage from "./pages/error";
 
 function App() {
   return (
-    <>
-      <Sidebar>
-        <h1>Simulate ocean trash</h1>
-        <p>
-          Look into the future by entering a year. The map will show how much
-          trash we'll have in the ocean by then.
-        </p>
-        <label>
-          Year:
-          <input
-            type="number"
-            className="input w-1/4"
-            placeholder="2023"
-            min={2020}
-            max={2100}
-          />
-        </label>
-      </Sidebar>
-      <Mapbox />
-    </>
+    <div>
+      <Routes>
+        <Route path="/" Component={SimulatorPage} />
+        <Route path="*" Component={ErrorPage} />
+      </Routes>
+    </div>
   );
 }
 
