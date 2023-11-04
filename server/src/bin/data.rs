@@ -24,15 +24,14 @@ fn main() -> () {
     
     let lf_2010_country: LazyFrame = lf_gen_country_capita
                                     .join_builder()
-                                        .with(lf_country_pop)
+                                        .with(lf_country_pop.clone())
                                         .how(JoinType::Inner)
                                         .left_on(&[col("Entity")])
                                         .right_on(&[col("Country Name")])
                                         .finish()
                                     .select(&[col("Entity"),
                                               col("Code"),
-                                              col("Year"),
-                                              col("Per capita plastic waste (kg/person/day)").alias("Total Waste Generated") * col("2010")]);
+                                              col("Per capita plastic waste (kg/person/day)").alias("2010 Total Waste Generated") * col("2010")]);
     
     let lf_2019_country: LazyFrame = lf_mis_country
                                      .join_builder()
@@ -42,13 +41,31 @@ fn main() -> () {
                                          .finish()
                                      .select(&[col("Entity"),
                                                col("Code"),
-                                               col("Year"),
                                                col("Mismanaged plastic waste per capita (kg per year)").alias("Mismanaged per capita"),
-                                               col("Mismanaged plastic waste to ocean per capita (kg per year)").alias("Emit per capita")]);
+                                               col("Mismanaged plastic waste to ocean per capita (kg per year)").alias("Emit per capita")])
+                                     .join_builder()
+                                         .with(lf_country_pop)
+                                         .how(JoinType::Inner)
+                                         .left_on(&[col("Entity")])
+                                         .right_on(&[col("Country Name")])
+                                         .finish()
+                                     .select(&[col("Entity"),
+                                               col("Code"),
+                                               col("Mismanaged per capita").alias("2019 Total Mismanaged") * col("2019") * 1000,
+                                               col("Emit per capita").alias("2019 Total Emitted") * col("2019") * 1000]);
+
+    let lf_country: LazyFrame = lf_2010_country.inner_join(lf_2019_country,
+                                                           col("Entity"),
+                                                           col("Entity"))
+                                               .select(&[col("Entity"),
+                                                         col("Code"),
+                                                         col("2010 Total Waste Generated"),
+                                                         col("2019 Total Mismanaged"),
+                                                         col("2019 Total Emitted")]);
 
 //    let gen_country: DataFrame = lf_gen_country.collect().unwrap();
 //    println!("{}", gen_country);
 
-    let lf1: DataFrame = lf_2019_country.collect().unwrap();
+    let lf1: DataFrame = lf_country.collect().unwrap();
     println!("{}", lf1);
 }
