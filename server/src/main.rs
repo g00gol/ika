@@ -4,7 +4,7 @@ use polars::prelude::*;
 #[post("/data")]
 async fn post_data() -> impl Responder {
     // read data file and convert to lazyframe
-    let lf: LazyFrame = LazyCsvReader::new("data/plastic_waste_generation/per_capita.csv").finish().unwrap();
+    let lf: LazyFrame = LazyCsvReader::new("data/plastic_emitted_to_ocean/per_capita.csv").finish().unwrap();
 
     HttpResponse::Ok().body({})
 }
