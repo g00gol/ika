@@ -51,8 +51,8 @@ fn main() -> () {
                                          .finish()
                                      .select(&[col("Entity"),
                                                col("Code"),
-                                               col("Mismanaged per capita").alias("2019 Total Mismanaged") * col("2019") * 1000,
-                                               col("Emit per capita").alias("2019 Total Emitted") * col("2019") * 1000]);
+                                               col("Mismanaged per capita").alias("2019 Total Mismanaged") * col("2019"),
+                                               col("Emit per capita").alias("2019 Total Emitted") * col("2019")]);
 
     let lf_country: LazyFrame = lf_2010_country.inner_join(lf_2019_country,
                                                            col("Entity"),
