@@ -4,6 +4,7 @@ use polars::prelude::*;
 fn main() -> () {
     // read data file and convert to lazyframe
     let lf_countries_to_continents: LazyFrame = LazyCsvReader::new("./data/countries-continents.csv").finish().unwrap();
+    println!("{}", lf_countries_to_continents.clone().collect().unwrap());
 
     let res: String = country_continent::country_to_continent(lf_countries_to_continents, "Uganda".to_string());
     println!("{}", res);
@@ -35,10 +36,15 @@ fn main() -> () {
     
     let lf_2019_country: LazyFrame = lf_mis_country
                                      .join_builder()
-                                        .with(lf_emit_capita)
-                                        .on(&[col("Entity"),
-                                              col("Year")])
-                                        .finish();
+                                         .with(lf_emit_capita)
+                                         .on(&[col("Entity"),
+                                               col("Year")])
+                                         .finish()
+                                     .select(&[col("Entity"),
+                                               col("Code"),
+                                               col("Year"),
+                                               col("Mismanaged plastic waste per capita (kg per year)").alias("Mismanaged per capita"),
+                                               col("Mismanaged plastic waste to ocean per capita (kg per year)").alias("Emit per capita")]);
 
 //    let gen_country: DataFrame = lf_gen_country.collect().unwrap();
 //    println!("{}", gen_country);
