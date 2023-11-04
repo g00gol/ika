@@ -5,7 +5,7 @@ fn main() -> () {
     // read data file and convert to lazyframe
     let lf_countries_to_continents: LazyFrame = LazyCsvReader::new("./data/countries-continents.csv").finish().unwrap();
 
-    let res = country_continent::country_to_continent(lf_countries_to_continents, "Uganda".to_string());
+    let res: String = country_continent::country_to_continent(lf_countries_to_continents, "Uganda".to_string());
     println!("{}", res);
 
     let lf_country_pop: LazyFrame = LazyCsvReader::new("./data/Country_Population_Data.csv").finish().unwrap();
