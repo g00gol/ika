@@ -1,7 +1,7 @@
 use actix_web::{post, HttpServer, HttpResponse, App, Responder};
 
 #[post("/data")]
-async fn pots_data() impl Responder {
+async fn post_data() -> impl Responder {
     HttpResponse::Ok().body({})
 }
 
