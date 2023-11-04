@@ -1,0 +1,164 @@
+Entity,Code,Year,Probability of plastic being emitted to ocean
+Albania,ALB,2019,1.56
+Algeria,DZA,2019,0.09
+Angola,AGO,2019,0.09
+Antigua and Barbuda,ATG,2019,3.08
+Argentina,ARG,2019,0.26
+Australia,AUS,2019,0.18
+Bahamas,BHS,2019,2.04
+Bahrain,BHR,2019,0
+Bangladesh,BGD,2019,2.32
+Barbados,BRB,2019,4.35
+Belgium,BEL,2019,0.71
+Belize,BLZ,2019,3.54
+Benin,BEN,2019,0.14
+Bosnia and Herzegovina,BIH,2019,0.95
+Brazil,BRA,2019,0.24
+Brunei,BRN,2019,10.22
+Bulgaria,BGR,2019,0.13
+Burkina Faso,BFA,2019,0
+Cambodia,KHM,2019,0.63
+Cameroon,CMR,2019,0.45
+Canada,CAN,2019,0.55
+Cape Verde,CPV,2019,0
+Chile,CHL,2019,2.58
+China,CHN,2019,0.19
+Colombia,COL,2019,0.62
+Comoros,COM,2019,0
+Congo,COG,2019,0.08
+Costa Rica,CRI,2019,6.25
+Cote d'Ivoire,CIV,2019,0
+Croatia,HRV,2019,0
+Cyprus,CYP,2019,0.62
+Democratic Republic of Congo,COD,2019,0.01
+Denmark,DNK,2019,2.33
+Djibouti,DJI,2019,0.22
+Dominica,DMA,2019,7.73
+Dominican Republic,DOM,2019,2.59
+East Timor,TLS,2019,3.8
+Ecuador,ECU,2019,0.57
+Egypt,EGY,2019,0.04
+El Salvador,SLV,2019,2.71
+Equatorial Guinea,GNQ,2019,2.97
+Eritrea,ERI,2019,0.13
+Estonia,EST,2019,0.76
+Fiji,FJI,2019,7.54
+Finland,FIN,2019,0
+France,FRA,2019,0.56
+French Guiana,GUF,2019,2.18
+Gabon,GAB,2019,0.7
+Gambia,GMB,2019,0.67
+Georgia,GEO,2019,1.23
+Germany,DEU,2019,0.26
+Ghana,GHA,2019,0.28
+Greece,GRC,2019,0.91
+Grenada,GRD,2019,5.99
+Guadeloupe,GLP,2019,4.35
+Guatemala,GTM,2019,1.74
+Guinea,GIN,2019,0
+Guinea-Bissau,GNB,2019,2.36
+Guyana,GUY,2019,0.89
+Haiti,HTI,2019,2.95
+Honduras,HND,2019,1.48
+Hong Kong,HKG,2019,4.51
+Iceland,ISL,2019,0
+India,IND,2019,0.45
+Indonesia,IDN,2019,4.45
+Iran,IRN,2019,0.07
+Iraq,IRQ,2019,0.01
+Ireland,IRL,2019,2.97
+Israel,ISR,2019,0.29
+Italy,ITA,2019,0.88
+Jamaica,JAM,2019,5.07
+Japan,JPN,2019,3.58
+Jordan,JOR,2019,0.07
+Kazakhstan,KAZ,2019,0.1
+Kenya,KEN,2019,0.17
+Kiribati,KIR,2019,0
+Kuwait,KWT,2019,0.2
+Latvia,LVA,2019,0.5
+Lebanon,LBN,2019,1.27
+Lesotho,LSO,2019,0
+Liberia,LBR,2019,3.68
+Libya,LBY,2019,0.06
+Lithuania,LTU,2019,0.21
+Macau,,2019,1.62
+Madagascar,MDG,2019,1.58
+Malaysia,MYS,2019,4.38
+Maldives,MDV,2019,0
+Malta,MLT,2019,0
+Marshall Islands,MHL,2019,0
+Martinique,MTQ,2019,10.11
+Mauritania,MRT,2019,0.1
+Mauritius,MUS,2019,0
+Mexico,MEX,2019,0.46
+Micronesia,,2019,5
+Monaco,MCO,2019,0
+Montenegro,MNE,2019,2.08
+Morocco,MAR,2019,0.15
+Mozambique,MOZ,2019,0.36
+Myanmar,MMR,2019,0.36
+Namibia,NAM,2019,0.05
+Netherlands,NLD,2019,1.54
+New Zealand,NZL,2019,3.78
+Nicaragua,NIC,2019,2.08
+Nigeria,NGA,2019,0.42
+North Korea,PRK,2019,0.69
+Norway,NOR,2019,0
+Oman,OMN,2019,0.11
+Pakistan,PAK,2019,0.02
+Palau,PLW,2019,13.74
+Palestine,PSE,2019,9.29
+Panama,PAN,2019,7.12
+Papua New Guinea,PNG,2019,4.39
+Peru,PER,2019,0.05
+Philippines,PHL,2019,7.17
+Poland,POL,2019,0.13
+Portugal,PRT,2019,0.84
+Puerto Rico,PRI,2019,5.77
+Qatar,QAT,2019,0.07
+Reunion,REU,2019,0
+Romania,ROU,2019,0.04
+Russia,RUS,2019,0.12
+Saint Kitts and Nevis,KNA,2019,2.52
+Saint Lucia,LCA,2019,7.92
+Saint Martin,,2019,0
+Saint Vincent and the Grenadines,VCT,2019,7.19
+Samoa,WSM,2019,0
+Sao Tome and Principe,STP,2019,3.67
+Saudi Arabia,SAU,2019,0.06
+Senegal,SEN,2019,0.21
+Seychelles,SYC,2019,0
+Sierra Leone,SLE,2019,3.09
+Singapore,SGP,2019,10.49
+Sint Maarten,,2019,0
+Slovakia,SVK,2019,0
+Slovenia,SVN,2019,1.13
+Solomon Islands,SLB,2019,10.34
+Somalia,SOM,2019,0.14
+South Africa,ZAF,2019,0.12
+South Korea,KOR,2019,1.59
+Spain,ESP,2019,0.36
+Sri Lanka,LKA,2019,3.42
+Sudan,SDN,2019,0.01
+Suriname,SUR,2019,0.85
+Sweden,SWE,2019,1.03
+Syria,SYR,2019,0.12
+Taiwan,TWN,2019,5.64
+Tanzania,TZA,2019,0.22
+Thailand,THA,2019,0.9
+Togo,TGO,2019,0.17
+Tonga,TON,2019,0
+Trinidad and Tobago,TTO,2019,5.05
+Tunisia,TUN,2019,0.18
+Turkey,TUR,2019,0.37
+Ukraine,UKR,2019,0.1
+United Arab Emirates,ARE,2019,0.18
+United Kingdom,GBR,2019,3.02
+United States,USA,2019,0.35
+Uruguay,URY,2019,0.52
+Venezuela,VEN,2019,0.39
+Vietnam,VNM,2019,1.6
+Western Sahara,ESH,2019,0.11
+Yemen,YEM,2019,0.07
+Zimbabwe,ZWE,2019,0

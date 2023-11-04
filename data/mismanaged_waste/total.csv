@@ -1,0 +1,201 @@
+Entity,Code,Year,Mismanaged
+Americas (excl. USA),,2000,5291803
+Americas (excl. USA),,2001,5561646
+Americas (excl. USA),,2002,5928127
+Americas (excl. USA),,2003,6267913
+Americas (excl. USA),,2004,6659430
+Americas (excl. USA),,2005,6974482
+Americas (excl. USA),,2006,7383156
+Americas (excl. USA),,2007,7809969
+Americas (excl. USA),,2008,7904060
+Americas (excl. USA),,2009,8187670
+Americas (excl. USA),,2010,8665047
+Americas (excl. USA),,2011,8984177
+Americas (excl. USA),,2012,9241368
+Americas (excl. USA),,2013,9541549
+Americas (excl. USA),,2014,9731705
+Americas (excl. USA),,2015,10219736
+Americas (excl. USA),,2016,10295320
+Americas (excl. USA),,2017,10447519
+Americas (excl. USA),,2018,10687745
+Americas (excl. USA),,2019,10889096
+Asia (excl. China and India),,2000,6338147
+Asia (excl. China and India),,2001,6777017
+Asia (excl. China and India),,2002,7325337
+Asia (excl. China and India),,2003,7859445
+Asia (excl. China and India),,2004,8460540
+Asia (excl. China and India),,2005,8992124
+Asia (excl. China and India),,2006,9635957
+Asia (excl. China and India),,2007,10315499
+Asia (excl. China and India),,2008,10653335
+Asia (excl. China and India),,2009,11206513
+Asia (excl. China and India),,2010,12033065
+Asia (excl. China and India),,2011,12696793
+Asia (excl. China and India),,2012,13292359
+Asia (excl. China and India),,2013,13953078
+Asia (excl. China and India),,2014,14588460
+Asia (excl. China and India),,2015,15390881
+Asia (excl. China and India),,2016,16068582
+Asia (excl. China and India),,2017,16874328
+Asia (excl. China and India),,2018,17775710
+Asia (excl. China and India),,2019,18150982
+China,CHN,2000,10350894
+China,CHN,2001,11011444
+China,CHN,2002,11856329
+China,CHN,2003,12626884
+China,CHN,2004,13483460
+China,CHN,2005,14150368
+China,CHN,2006,14978694
+China,CHN,2007,15803812
+China,CHN,2008,15907054
+China,CHN,2009,16354477
+China,CHN,2010,17217424
+China,CHN,2011,17758224
+China,CHN,2012,18039242
+China,CHN,2013,18188502
+China,CHN,2014,18450720
+China,CHN,2015,18448486
+China,CHN,2016,18205878
+China,CHN,2017,17901154
+China,CHN,2018,17046954
+China,CHN,2019,17462668
+Europe,,2000,5424551
+Europe,,2001,5434649
+Europe,,2002,5502827
+Europe,,2003,5527382
+Europe,,2004,5565384
+Europe,,2005,5527721
+Europe,,2006,5528836
+Europe,,2007,5517138
+Europe,,2008,5300543
+Europe,,2009,5178639
+Europe,,2010,5154416
+Europe,,2011,5033360
+Europe,,2012,4881828
+Europe,,2013,4741392
+Europe,,2014,4527848
+Europe,,2015,4356649
+Europe,,2016,4174393
+Europe,,2017,4016212
+Europe,,2018,3831498
+Europe,,2019,3799391
+India,IND,2000,2359011
+India,IND,2001,2567475
+India,IND,2002,2822789
+India,IND,2003,3072402
+India,IND,2004,3350256
+India,IND,2005,3595685
+India,IND,2006,3888038
+India,IND,2007,4193827.2
+India,IND,2008,4344496
+India,IND,2009,4587107
+India,IND,2010,5035518
+India,IND,2011,5436582
+India,IND,2012,5808127
+India,IND,2013,6225948
+India,IND,2014,6641710
+India,IND,2015,6936626
+India,IND,2016,7340763
+India,IND,2017,7743059
+India,IND,2018,8119849
+India,IND,2019,8457541
+Middle East & North Africa,,2000,3121883
+Middle East & North Africa,,2001,3263276
+Middle East & North Africa,,2002,3452754
+Middle East & North Africa,,2003,3628668
+Middle East & North Africa,,2004,3829336
+Middle East & North Africa,,2005,3991293
+Middle East & North Africa,,2006,4198402
+Middle East & North Africa,,2007,4414690
+Middle East & North Africa,,2008,4472405
+Middle East & North Africa,,2009,4621749
+Middle East & North Africa,,2010,4885492
+Middle East & North Africa,,2011,5072754
+Middle East & North Africa,,2012,5244840
+Middle East & North Africa,,2013,5430095
+Middle East & North Africa,,2014,5599134
+Middle East & North Africa,,2015,5785391
+Middle East & North Africa,,2016,6118184
+Middle East & North Africa,,2017,6342768
+Middle East & North Africa,,2018,6506718
+Middle East & North Africa,,2019,6675025
+Oceania,,2000,50274
+Oceania,,2001,53953
+Oceania,,2002,58243
+Oceania,,2003,62439
+Oceania,,2004,66976
+Oceania,,2005,71014
+Oceania,,2006,75621
+Oceania,,2007,80384
+Oceania,,2008,83206
+Oceania,,2009,87144
+Oceania,,2010,92364
+Oceania,,2011,97318
+Oceania,,2012,99739
+Oceania,,2013,105509
+Oceania,,2014,107727
+Oceania,,2015,111547
+Oceania,,2016,115241
+Oceania,,2017,120137
+Oceania,,2018,122146
+Oceania,,2019,124666
+Sub-Saharan Africa,,2000,3612815
+Sub-Saharan Africa,,2001,3877820
+Sub-Saharan Africa,,2002,4225762
+Sub-Saharan Africa,,2003,4561808
+Sub-Saharan Africa,,2004,4950097
+Sub-Saharan Africa,,2005,5284911
+Sub-Saharan Africa,,2006,5708091
+Sub-Saharan Africa,,2007,6157719
+Sub-Saharan Africa,,2008,6325124
+Sub-Saharan Africa,,2009,6664882
+Sub-Saharan Africa,,2010,7190390
+Sub-Saharan Africa,,2011,7589907
+Sub-Saharan Africa,,2012,7947111
+Sub-Saharan Africa,,2013,8336550.5
+Sub-Saharan Africa,,2014,8664041
+Sub-Saharan Africa,,2015,9147928
+Sub-Saharan Africa,,2016,9381436
+Sub-Saharan Africa,,2017,9643507
+Sub-Saharan Africa,,2018,9966291
+Sub-Saharan Africa,,2019,10251547
+United States,USA,2000,3638777
+United States,USA,2001,3641029
+United States,USA,2002,3680473
+United States,USA,2003,3692642
+United States,USA,2004,3713553
+United States,USA,2005,3685981
+United States,USA,2006,3683387
+United States,USA,2007,3673731
+United States,USA,2008,3534963
+United States,USA,2009,3457134
+United States,USA,2010,3442054
+United States,USA,2011,3364751
+United States,USA,2012,3264327
+United States,USA,2013,3160712
+United States,USA,2014,3030476
+United States,USA,2015,2916320
+United States,USA,2016,2835037
+United States,USA,2017,2703756
+United States,USA,2018,2587329
+United States,USA,2019,2448288
+World,OWID_WRL,2000,40188156
+World,OWID_WRL,2001,42188308
+World,OWID_WRL,2002,44852640
+World,OWID_WRL,2003,47299584
+World,OWID_WRL,2004,50079030
+World,OWID_WRL,2005,52273580
+World,OWID_WRL,2006,55080184
+World,OWID_WRL,2007,57966770
+World,OWID_WRL,2008,58525184
+World,OWID_WRL,2009,60345316
+World,OWID_WRL,2010,63715770
+World,OWID_WRL,2011,66033864
+World,OWID_WRL,2012,67818940
+World,OWID_WRL,2013,69683336
+World,OWID_WRL,2014,71341820
+World,OWID_WRL,2015,73313570
+World,OWID_WRL,2016,74534830
+World,OWID_WRL,2017,75792440
+World,OWID_WRL,2018,76644240
+World,OWID_WRL,2019,78259200
