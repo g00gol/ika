@@ -1,7 +1,11 @@
 use actix_web::{post, HttpServer, HttpResponse, App, Responder};
+use polars::prelude::*;
 
 #[post("/data")]
 async fn post_data() -> impl Responder {
+    // read data file and convert to lazyframe
+    let lf: LazyFrame = LazyCsvReader::new("data/plastic_waste_generation/per_capita.csv").finish().unwrap();
+
     HttpResponse::Ok().body({})
 }
 
