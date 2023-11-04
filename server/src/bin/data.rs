@@ -18,7 +18,7 @@ fn main() -> () {
     let lf_emit_capita: LazyFrame = LazyCsvReader::new("./data/plastic_emitted_to_ocean/per_capita.csv").finish().unwrap();
     // let lf_emit_total: LazyFrame = LazyCsvReader::new("./data/plastic_emitted_to_ocean/total.csv").finish().unwrap();
     
-    let lf_2010_country: LazyFrame = lf_gen_country_capita
+    let lf_2010_country: LazyFrame = lf_gen_country_capita.clone()
                                     .join_builder()
                                         .with(lf_country_pop.clone())
                                         .how(JoinType::Inner)
@@ -59,10 +59,15 @@ fn main() -> () {
                                                          col("2019 Total Mismanaged"),
                                                          col("2019 Total Emitted")]);
 
+    // We probably lost some countries here because of the join
     let lf_region: LazyFrame = lf_countries_continents.inner_join(lf_country.clone(),
-                                                                  col("Country Name"),
+                                                                  col("Country"),
                                                                   col("Entity"));
 
+    let plastic_waste_gen_2010_2019: LazyFrame = lf_gen_country_capita.filter(
+            col("Year").eq(lit(2019))
+            .or(col("Year").eq(lit(2010)))
+        );
 
 //    let gen_country: DataFrame = lf_gen_country.collect().unwrap();
 //    println!("{}", gen_country);
