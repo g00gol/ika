@@ -52,8 +52,7 @@ const format = async (endYear) => {
       };
     }
   });
-
-  console.log(updated);
+  return updated;
 };
 
-format(2023);
+export default format;
