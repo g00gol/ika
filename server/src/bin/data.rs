@@ -1,7 +1,6 @@
-mod country_continent;
 use polars::prelude::*;
 
-fn main() -> () {
+fn init_dataframe() -> DataFrame {
     // read data file and convert to lazyframe
     let lf_countries_continents: LazyFrame = LazyCsvReader::new("./data/countries-continents.csv").finish().unwrap();
 
@@ -110,6 +109,13 @@ fn main() -> () {
                                            // col("Year"),
                                            // col("Mismanaged")]);
 
-    let lf1: DataFrame = lf_country.collect().unwrap();
-    println!("{}", lf1);
+    // Calculate change per year
+    let lf_slope: LazyFrame = lf_country
+                                .with_column(
+                                    (col("2019 Total Emitted").alias("Change Per Year")-col("2010 Total Emitted"))/lit(9)
+                                    );
+                                
+
+
+    return lf_slope.collect().unwrap();
 }
