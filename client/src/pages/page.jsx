@@ -24,7 +24,6 @@ const Hero = () => {
   const bottleRef = useRef();
 
   useLayoutEffect(() => {
-    console.log(bottleRef);
     gsap.to(bottleRef.current, {
       rotation: "+=360",
     });
@@ -45,10 +44,10 @@ const Hero = () => {
         className="group flex cursor-pointer flex-col items-center space-y-4"
       >
         <p>(click to throw)</p>
-        <FaBottleWater
-          ref={bottleRef}
-          className="group-hover:text-primary text-4xl"
-        />
+
+        <div ref={bottleRef}>
+          <FaBottleWater className="group-hover:text-primary text-4xl" />
+        </div>
         <BsArrowDown className="text-3xl" />
       </div>
     </section>
