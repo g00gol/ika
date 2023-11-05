@@ -2,6 +2,7 @@ import Map, { Source, Layer } from "react-map-gl";
 import { useEffect, useState, useContext } from "react";
 import format from "../../utils/geoJsonProcessor";
 import { Context } from "../../context/context";
+import Sidebar from "../Sidebar";
 
 const API_KEY = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
@@ -9,6 +10,7 @@ export default function Mapbox() {
   const [geoJson, setGeoJson] = useState(null);
   const [maxValue, setMaxValue] = useState(0);
   const { year, setYear } = useContext(Context);
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -47,6 +49,11 @@ export default function Mapbox() {
     },
   };
 
+  const onClick = (event) => {
+    const feature = event.features && event.features[0];
+    setSelectedCountry(feature);
+  };
+
   return (
     <div className="h-screen w-screen">
       <Map
@@ -59,10 +66,17 @@ export default function Mapbox() {
         maxZoom={6}
         style={{ position: "relative", width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/tumtarts/clokif760006001nt96303gcu"
+        onClick={onClick}
+        interactiveLayerIds={[geoLayer.id]}
       >
         <Source id="my-data" type="geojson" data={geoJson}>
           <Layer {...geoLayer} />
         </Source>
+        {selectedCountry && (
+          <Sidebar>
+            <h1>{selectedCountry.properties.ADMIN}</h1>
+          </Sidebar>
+        )}
       </Map>
     </div>
   );
