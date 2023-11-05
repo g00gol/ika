@@ -1,10 +1,11 @@
 mod init;
 
 use std::sync::Mutex;
-use actix_web::{web, Error, post, HttpResponse, Result, HttpServer, App};
+use actix_web::{web, Error, http, post, HttpResponse, Result, HttpServer, App};
 use polars::prelude::*;
 use serde::{Serialize, Deserialize};
 use serde_json;
+use actix_cors::Cors;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct PostBody {
@@ -56,7 +57,18 @@ async fn main() -> std::io::Result<()> {
     let df = init::init_dataframe();
 
     HttpServer::new(move || {
+        let cors = Cors::default()
+            .allowed_origin("http://127.0.0.1:3001")
+            .allowed_origin_fn(|origin, _req_head| {
+                origin.as_bytes().ends_with(b".rust-lang.org")
+             })
+              .allowed_methods(vec!["GET", "POST", "OPTION"])
+              .allowed_headers(vec![http::header::AUTHORIZATION, http::header::ACCEPT])
+              .allowed_header(http::header::CONTENT_TYPE)
+              .max_age(3600);
+
         App::new()
+            .wrap(cors)
             .app_data(web::Data::new(Mutex::new(df.clone()))) 
             .service(post_route)
             //.service(web::resource("/data").route(web::post().to(post)))
