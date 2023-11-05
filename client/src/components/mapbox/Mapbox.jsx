@@ -17,7 +17,6 @@ export default function Mapbox() {
 
   useEffect(() => {
     (async () => {
-      console.log(year);
       const data = await format(year);
       const max = Math.max(
         ...data.features.map((country) => country.properties["2019"]),
@@ -86,7 +85,6 @@ export default function Mapbox() {
         {selectedCountry && (
           <Sidebar>
             <h1>{selectedCountry.properties.ADMIN}</h1>
-            <h2>Statistics</h2>
             <div className="stats stats-vertical shadow-text/30 shadow">
               <div className="stat">
                 <div className="stat-title">Population</div>
