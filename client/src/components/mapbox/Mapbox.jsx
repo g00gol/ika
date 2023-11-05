@@ -10,7 +10,7 @@ export default function Mapbox() {
 
   useEffect(() => {
     (async () => {
-      const data = await format();
+      const data = await format(2023);
       console.log(data);
       setGeoJson(data);
     })();
