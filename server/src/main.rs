@@ -1,7 +1,7 @@
 mod init;
 
 use std::sync::Mutex;
-use actix_web::{web, Error, post, HttpResponse, Result, HttpServer, App, Responder};
+use actix_web::{web, Error, post, HttpResponse, Result, HttpServer, App};
 use polars::prelude::*;
 use serde::{Serialize, Deserialize};
 use serde_json;
@@ -42,8 +42,8 @@ async fn post_route(body: web::Json<PostBody>, df: web::Data<Mutex<DataFrame>>) 
 
     Ok(HttpResponse::Ok()
        // We put the hack in hackathon
-        .header("Access-Control-Allow-Headers", "*")
-        .header("Access-Control-Allow-Origin", "*")
+        .append_header(("Access-Control-Allow-Headers", "*"))
+        .append_header(("Access-Control-Allow-Origin", "*"))
        .json(serde_json::to_value(lf_years_emitted.collect().unwrap())?))
 
 }
