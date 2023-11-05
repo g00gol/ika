@@ -57,7 +57,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Dominica,DMA,68755,71428
 "Population, total",SP.POP.TOTL,Dominican Republic,DOM,9775755,10881882
 "Population, total",SP.POP.TOTL,Ecuador,ECU,14989585,17343740
-"Population, total",SP.POP.TOTL,"Egypt, Arab Rep.",EGY,87252413,105618671
+"Population, total",SP.POP.TOTL,Egypt,EGY,87252413,105618671
 "Population, total",SP.POP.TOTL,El Salvador,SLV,6114034,6280217
 "Population, total",SP.POP.TOTL,Equatorial Guinea,GNQ,1094524,1553031
 "Population, total",SP.POP.TOTL,Eritrea,ERI,3147727,3498818
@@ -90,7 +90,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Iceland,ISL,318041,360563
 "Population, total",SP.POP.TOTL,India,IND,1240613620,1383112050
 "Population, total",SP.POP.TOTL,Indonesia,IDN,244016173,269582878
-"Population, total",SP.POP.TOTL,"Iran, Islamic Rep.",IRN,75373855,86564202
+"Population, total",SP.POP.TOTL,"Iran",IRN,75373855,86564202
 "Population, total",SP.POP.TOTL,Iraq,IRQ,31264875,41563520
 "Population, total",SP.POP.TOTL,Ireland,IRL,4560155,4934340
 "Population, total",SP.POP.TOTL,Isle of Man,IMN,83828,83933
@@ -160,7 +160,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Puerto Rico,PRI,3721525,3193694
 "Population, total",SP.POP.TOTL,Qatar,QAT,1713504,2807235
 "Population, total",SP.POP.TOTL,Romania,ROU,20246871,19371648
-"Population, total",SP.POP.TOTL,Russian Federation,RUS,142849468,144406261
+"Population, total",SP.POP.TOTL,Russia,RUS,142849468,144406261
 "Population, total",SP.POP.TOTL,Rwanda,RWA,10309031,12835028
 "Population, total",SP.POP.TOTL,Samoa,WSM,194672,211905
 "Population, total",SP.POP.TOTL,San Marino,SMR,31608,34178
@@ -188,7 +188,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Suriname,SUR,546080,600301
 "Population, total",SP.POP.TOTL,Sweden,SWE,9378126,10278887
 "Population, total",SP.POP.TOTL,Switzerland,CHE,7824909,8575280
-"Population, total",SP.POP.TOTL,Syrian Arab Republic,SYR,22337563,20098251
+"Population, total",SP.POP.TOTL,Syria,SYR,22337563,20098251
 "Population, total",SP.POP.TOTL,Tajikistan,TJK,7621779,9337003
 "Population, total",SP.POP.TOTL,Tanzania,TZA,45110527,59872579
 "Population, total",SP.POP.TOTL,Thailand,THA,68270489,71307763
