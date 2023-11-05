@@ -19,13 +19,23 @@ async fn post_route(body: web::Json<PostBody>, df: web::Data<Mutex<DataFrame>>) 
     let expressions: Vec<Expr> = (2020..(body.year+1))
 
         // Prevent future Total Emitted being less than 0 
-        .map(|y| when((col("2019")+col("Change Per Year")*lit(y-2019)).lt(0))
-
-             .then(lit(0).alias(format!("{}", y).as_str()))
+        .map(|y|
+             // If change per year is negative ...
+             when(col("Change Per Year").lt(0))
+             // Then scale down by factor of 10 ...
+             .then(
+                 when((col("2019") + col("Change Per Year") / lit(10) * lit(y-2019)).lt(0))
+                 .then(lit(0).alias(format!("{}", y).as_str()))
+                 .otherwise(
+                     col("2019").alias(format!("{}", y).as_str()) + col("Change Per Year") / lit(10) * lit(y-2019)
+                 ))
+             // Otherwise, process normally
              .otherwise(
-                 col("2019")
-                          .alias(format!("{}", y).as_str())
-                          +col("Change Per Year")*lit(y-2019)
+                 when((col("2019") + col("Change Per Year") * lit(y-2019)).lt(0))
+                 .then(lit(0).alias(format!("{}", y).as_str()))
+                 .otherwise(
+                     col("2019").alias(format!("{}", y).as_str()) + col("Change Per Year") * lit(y-2019)
+                 )
              )).collect();
 
     let lf_years_emitted: LazyFrame = df.lock().unwrap().clone().lazy()
