@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 
 import Sidebar from "../../components/Sidebar";
 import Mapbox from "../../components/mapbox/Mapbox";
@@ -25,9 +25,10 @@ export default function SimulatorPage() {
               className="input w-1/4"
               placeholder="2023"
               min={2020}
-              max={2100}
-              value={year}
-              onChange={(e) => setInput(e.target.value)}
+              max={9999}
+              step={10}
+              value={input}
+              onChange={(e) => setInput(Number(e.target.value))}
             />
           </label>
         </div>
@@ -35,7 +36,7 @@ export default function SimulatorPage() {
         <button
           className="btn btn-primary mt-auto"
           onClick={() => {
-            setYear(input);
+            setYear(Number(input));
             setSubmitted(true);
           }}
         >
