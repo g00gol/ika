@@ -4,12 +4,16 @@ version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "data"
-path = "src/bin/data.rs"
+name = "df"
+path = "src/bin/df.rs"
 
 [[bin]]
 name = "main"
 path = "src/main.rs"
+
+[lib]
+name = "init"
+path = "src/init.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
