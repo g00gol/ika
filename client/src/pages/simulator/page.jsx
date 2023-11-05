@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 
 import Sidebar from "../../components/Sidebar";
 import Mapbox from "../../components/mapbox/Mapbox";
@@ -11,7 +11,7 @@ export default function SimulatorPage() {
 
   return (
     <>
-      <Sidebar collapsed={submitted}>
+      <Sidebar>
         <h1>Simulate ocean trash</h1>
         <div className="flex-grow">
           <p>
@@ -19,15 +19,16 @@ export default function SimulatorPage() {
             trash we'll have in the ocean by then.
           </p>
           <label>
-            Year:
+            Year: {input}
             <input
-              type="number"
-              className="input w-1/4"
+              type="range"
+              className="input w-full"
               placeholder="2023"
               min={2020}
               max={2100}
-              value={year}
-              onChange={(e) => setInput(e.target.value)}
+              step={10}
+              value={input}
+              onChange={(e) => setInput(Number(e.target.value))}
             />
           </label>
         </div>
@@ -35,7 +36,7 @@ export default function SimulatorPage() {
         <button
           className="btn btn-primary mt-auto"
           onClick={() => {
-            setYear(input);
+            setYear(Number(input));
             setSubmitted(true);
           }}
         >

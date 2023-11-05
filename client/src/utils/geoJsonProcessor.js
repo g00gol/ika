@@ -1,16 +1,15 @@
 import countries from "../../data/countries.json" assert { type: "json" };
 
-const res = await fetch("http://127.0.0.1:3001/data", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    year: 2023,
-  }),
-});
-
 const format = async (endYear) => {
+  const res = await fetch("http://127.0.0.1:3001/data", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      year: endYear,
+    }),
+  });
   const { columns: data } = await res.json();
   const changeRate = data.find((col) => col.name === "Change Per Year").values;
   const countryCodes = data.find((col) => col.name === "Code").values;
