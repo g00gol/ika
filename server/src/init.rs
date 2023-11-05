@@ -28,8 +28,7 @@ pub fn init_dataframe() -> DataFrame {
                                     // We probably lost some countries here because of the join
                                       .select(&[col("Entity"),
                                                 col("Code"),
-                                                col("Continent"),
-                                                col("Plastic waste generation (tonnes, total)").alias("2010 Total Waste Generated") * lit(1000)]);
+                                                col("Continent")]);
     
     let lf_2019_country: LazyFrame = lf_mis_country
                                      .left_join(lf_countries_continents,
@@ -97,10 +96,8 @@ pub fn init_dataframe() -> DataFrame {
                                 .select(&[col("Entity"),
                                           col("Code"),
                                           col("Continent"),
-                                          col("2010 Total Waste Generated"),
                                           col("2019 % of Region Mismanaged").alias("2010 Total Mismanaged") * col("Mismanaged") * lit(10),
                                           col("2019 Total Mismanaged"),
-                                          col("2019 % of Region Mismanaged"),
                                           col("2019 Total Emitted"),
                                           col("2019 Prob Emitted")])
                                 .select(&[col("*"),
@@ -110,6 +107,15 @@ pub fn init_dataframe() -> DataFrame {
 
     // Calculate change per year
     let lf_slope: LazyFrame = lf_country
+                                .select(
+                                    &[
+                                        col("Entity"),
+                                        col("Code"),
+                                        col("Continent"),
+                                        col("2019 Total Emitted"),
+                                        col("2010 Total Emitted"),
+                                    ]
+                                    )
                                 .with_column(
                                     (col("2019 Total Emitted").alias("Change Per Year")-col("2010 Total Emitted"))/lit(9)
                                     );
