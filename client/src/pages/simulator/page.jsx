@@ -1,15 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import Sidebar from "../../components/Sidebar";
 import Mapbox from "../../components/mapbox/Mapbox";
 import { Context } from "../../context/context";
 
 export default function SimulatorPage() {
+  const [input, setInput] = useState(2020);
+  const [submitted, setSubmitted] = useState(false);
   const { year, setYear } = useContext(Context);
 
   return (
     <>
-      <Sidebar>
+      <Sidebar collapsed={submitted}>
         <h1>Simulate ocean trash</h1>
         <div className="flex-grow">
           <p>
@@ -25,12 +27,18 @@ export default function SimulatorPage() {
               min={2020}
               max={2100}
               value={year}
-              onChange={(e) => setYear(e.target.value)}
+              onChange={(e) => setInput(e.target.value)}
             />
           </label>
         </div>
 
-        <button className="btn btn-primary mt-auto" onClick={console.log(year)}>
+        <button
+          className="btn btn-primary mt-auto"
+          onClick={() => {
+            setYear(input);
+            setSubmitted(true);
+          }}
+        >
           Simulate
         </button>
       </Sidebar>
