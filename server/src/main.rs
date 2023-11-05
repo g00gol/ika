@@ -33,7 +33,8 @@ async fn post_route(body: web::Json<PostBody>, df: web::Data<Mutex<DataFrame>>) 
                                            col("Entity"),
                                            col("Continent"),
                                            col("2019 Total Emitted").alias("2019"),
-                                           col("Change Per Year")
+                                           col("Change Per Year"),
+                                           col("Code")
                                         ])
                                         .with_columns(
                                             expressions
