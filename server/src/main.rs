@@ -45,7 +45,7 @@ async fn post_route(body: web::Json<PostBody>, df: web::Data<Mutex<DataFrame>>) 
        // We put the hack in hackathon
         .append_header(("Access-Control-Allow-Headers", "*"))
         .append_header(("Access-Control-Allow-Origin", "*"))
-        .append_header(("Access-Control-Allow-Methods", "POST"))
+        .append_header(("Access-Control-Allow-Methods", "*"))
        .json(serde_json::to_value(lf_years_emitted.collect().unwrap())?))
 
 }
@@ -58,7 +58,8 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(move || {
         let cors = Cors::default()
-            .allowed_origin("http://127.0.0.1:3001")
+            .allowed_origin("http://localhost:3001")
+            .allowed_origin("http://localhost:5173")
             .allowed_origin_fn(|origin, _req_head| {
                 origin.as_bytes().ends_with(b".rust-lang.org")
              })
