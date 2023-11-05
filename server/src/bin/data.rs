@@ -23,7 +23,7 @@ fn main() -> () {
     
 
     let lf_2010_country: LazyFrame = lf_gen_country
-                                     .left_join(lf_countries_continents,
+                                     .left_join(lf_countries_continents.clone(),
                                                  col("Entity"),
                                                  col("Country"))
                                     // We probably lost some countries here because of the join
@@ -33,6 +33,9 @@ fn main() -> () {
                                                 col("Plastic waste generation (tonnes, total)").alias("2010 Total Waste Generated") * lit(1000)]);
     
     let lf_2019_country: LazyFrame = lf_mis_country
+                                     .left_join(lf_countries_continents,
+                                                 col("Entity"),
+                                                 col("Country"))
                                      .join_builder()
                                          .with(lf_emit_capita)
                                          .how(JoinType::Inner)
@@ -41,6 +44,7 @@ fn main() -> () {
                                          .finish()
                                      .select(&[col("Entity"),
                                                col("Code"),
+                                               col("Continent"),
                                                col("Mismanaged plastic waste per capita (kg per year)").alias("Mismanaged per capita"),
                                                col("Mismanaged plastic waste to ocean per capita (kg per year)").alias("Emit per capita")])
                                      .join_builder()
@@ -54,14 +58,21 @@ fn main() -> () {
                                                  col("Entity"))
                                      .select(&[col("Entity"),
                                                col("Code"),
+                                               col("Continent"),
                                                col("Mismanaged per capita").alias("2019 Total Mismanaged") * col("2019"),
                                                col("Emit per capita").alias("2019 Total Emitted") * col("2019"),
-                                               col("Probability of plastic being emitted to ocean").alias("2019 Prob Emitted")]);
-                                     //.inner_join(lf_prob_country,
-                                     //            col("Entity"),
-                                     //            col("Entity"))
-                                     //.filter(col("Year").eq(lit(2019))
-                                     //.select(&[col("*")]);
+                                               col("Probability of plastic being emitted to ocean").alias("2019 Prob Emitted")])
+                                     .inner_join(lf_mis_region.clone(),
+                                                 col("Continent"),
+                                                 col("Entity"))
+                                     .filter(col("Year").eq(lit(2019)))
+                                     .select(&[col("Entity"),
+                                               col("Code"),
+                                               col("Continent"),
+                                               col("2019 Total Mismanaged"),
+                                               col("2019 Total Mismanaged").alias("2019 % of Region Mismanaged") / col("Mismanaged") / lit(10),
+                                               col("2019 Total Emitted"),
+                                               col("2019 Prob Emitted")]);
 
     println!("{}", lf_2019_country.clone().collect().unwrap());
 
@@ -81,14 +92,21 @@ fn main() -> () {
 
     let lf_country: LazyFrame = lf_2010_country
                                 .inner_join(lf_2019_country, col("Entity"), col("Entity"))
+                                .inner_join(lf_mis_region,
+                                            col("Continent"),
+                                            col("Entity"))
+                                .filter(col("Year").eq(lit(2010)))
                                 .select(&[col("Entity"),
-                                           col("Code"),
-                                           col("Continent"),
-                                           col("2010 Total Waste Generated"),
-                                           col("2019 Total Mismanaged"),
-                                           // col("2019 Total Mismanaged").alias("2019 Percent of Region Mismanaged") / col("Mismanaged"),
-                                           col("2019 Total Emitted"),
-                                           col("2019 Prob Emitted")]);
+                                          col("Code"),
+                                          col("Continent"),
+                                          col("2010 Total Waste Generated"),
+                                          col("2019 % of Region Mismanaged").alias("2010 Total Mismanaged") * col("Mismanaged") * lit(10),
+                                          col("2019 Total Mismanaged"),
+                                          col("2019 % of Region Mismanaged"),
+                                          col("2019 Total Emitted"),
+                                          col("2019 Prob Emitted")])
+                                .select(&[col("*"),
+                                          col("2010 Total Mismanaged").alias("2010 Total Emitted") / lit(100) * col("2019 Prob Emitted")]);
                                            // col("Year"),
                                            // col("Mismanaged")]);
 
