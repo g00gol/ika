@@ -102,8 +102,8 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Kazakhstan,KAZ,16321872,18513673
 "Population, total",SP.POP.TOTL,Kenya,KEN,41517895,50951450
 "Population, total",SP.POP.TOTL,Kiribati,KIR,107995,124241
-"Population, total",SP.POP.TOTL,"Korea, Dem. People's Rep.",PRK,24686435,25755441
-"Population, total",SP.POP.TOTL,"Korea, Rep.",KOR,49554112,51764822
+"Population, total",SP.POP.TOTL,North Korea,PRK,24686435,25755441
+"Population, total",SP.POP.TOTL,South Korea,KOR,49554112,51764822
 "Population, total",SP.POP.TOTL,Kosovo,XKX,1775680,1788878
 "Population, total",SP.POP.TOTL,Kuwait,KWT,2943356,4441100
 "Population, total",SP.POP.TOTL,Kyrgyz Republic,KGZ,5447900,6456200
