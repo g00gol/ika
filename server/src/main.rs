@@ -41,10 +41,6 @@ async fn post_route(body: web::Json<PostBody>, df: web::Data<Mutex<DataFrame>>) 
 
     Ok(HttpResponse::Ok().json(serde_json::to_value(lf_years_emitted.clone().collect().unwrap())?))
 
-   // Ok(web::Json(
-     //       lf_years_emitted.clone().collect().unwrap()
-       //     )
-        //)
 }
 
 #[actix_web::main]
