@@ -12,7 +12,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Australia,AUS,22031750,25340217
 "Population, total",SP.POP.TOTL,Austria,AUT,8363404,8879920
 "Population, total",SP.POP.TOTL,Azerbaijan,AZE,9054332,10024283
-"Population, total",SP.POP.TOTL,"Bahamas, The",BHS,373272,404557
+"Population, total",SP.POP.TOTL,Bahamas,BHS,373272,404557
 "Population, total",SP.POP.TOTL,Bahrain,BHR,1213645,1494188
 "Population, total",SP.POP.TOTL,Bangladesh,BGD,148391139,165516222
 "Population, total",SP.POP.TOTL,Barbados,BRB,274711,280180
@@ -43,8 +43,8 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,China,CHN,1337705000,1407745000
 "Population, total",SP.POP.TOTL,Colombia,COL,44816108,50187406
 "Population, total",SP.POP.TOTL,Comoros,COM,656024,790986
-"Population, total",SP.POP.TOTL,"Congo, Dem. Rep.",COD,66391257,89906890
-"Population, total",SP.POP.TOTL,"Congo, Rep.",COG,4437884,5570733
+"Population, total",SP.POP.TOTL,Democratic Republic of Congo,COD,66391257,89906890
+"Population, total",SP.POP.TOTL,Congo,COG,4437884,5570733
 "Population, total",SP.POP.TOTL,Costa Rica,CRI,4622252,5084532
 "Population, total",SP.POP.TOTL,Cote d'Ivoire,CIV,21120042,26147551
 "Population, total",SP.POP.TOTL,Croatia,HRV,4295427,4065253
@@ -70,7 +70,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,France,FRA,65030575,67388001
 "Population, total",SP.POP.TOTL,French Polynesia,PYF,283788,299717
 "Population, total",SP.POP.TOTL,Gabon,GAB,1711105,2242785
-"Population, total",SP.POP.TOTL,"Gambia, The",GMB,1937275,2508883
+"Population, total",SP.POP.TOTL,Gambia,GMB,1937275,2508883
 "Population, total",SP.POP.TOTL,Georgia,GEO,3786695,3720161
 "Population, total",SP.POP.TOTL,Germany,DEU,81776930,83092962
 "Population, total",SP.POP.TOTL,Ghana,GHA,25574719,31522290
@@ -85,12 +85,12 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Guyana,GUY,747932,798753
 "Population, total",SP.POP.TOTL,Haiti,HTI,9842880,11160438
 "Population, total",SP.POP.TOTL,Honduras,HND,8450933,9958829
-"Population, total",SP.POP.TOTL,"Hong Kong SAR, China",HKG,7024200,7507900
+"Population, total",SP.POP.TOTL,Hong Kong,HKG,7024200,7507900
 "Population, total",SP.POP.TOTL,Hungary,HUN,10000023,9771141
 "Population, total",SP.POP.TOTL,Iceland,ISL,318041,360563
 "Population, total",SP.POP.TOTL,India,IND,1240613620,1383112050
 "Population, total",SP.POP.TOTL,Indonesia,IDN,244016173,269582878
-"Population, total",SP.POP.TOTL,"Iran",IRN,75373855,86564202
+"Population, total",SP.POP.TOTL,Iran,IRN,75373855,86564202
 "Population, total",SP.POP.TOTL,Iraq,IRQ,31264875,41563520
 "Population, total",SP.POP.TOTL,Ireland,IRL,4560155,4934340
 "Population, total",SP.POP.TOTL,Isle of Man,IMN,83828,83933
@@ -116,7 +116,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Liechtenstein,LIE,35926,38482
 "Population, total",SP.POP.TOTL,Lithuania,LTU,3097282,2794137
 "Population, total",SP.POP.TOTL,Luxembourg,LUX,506953,620001
-"Population, total",SP.POP.TOTL,"Macao SAR, China",MAC,557297,663653
+"Population, total",SP.POP.TOTL,Macao,MAC,557297,663653
 "Population, total",SP.POP.TOTL,Madagascar,MDG,21731053,27533134
 "Population, total",SP.POP.TOTL,Malawi,MWI,14718422,18867337
 "Population, total",SP.POP.TOTL,Malaysia,MYS,28717731,32804020
@@ -127,7 +127,7 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Mauritania,MRT,3419461,4383849
 "Population, total",SP.POP.TOTL,Mauritius,MUS,1250400,1265985
 "Population, total",SP.POP.TOTL,Mexico,MEX,112532401,125085311
-"Population, total",SP.POP.TOTL,"Micronesia, Fed. Sts.",FSM,107588,111379
+"Population, total",SP.POP.TOTL,Micronesia,FSM,107588,111379
 "Population, total",SP.POP.TOTL,Moldova,MDA,2862354,2664224
 "Population, total",SP.POP.TOTL,Monaco,MCO,33178,37034
 "Population, total",SP.POP.TOTL,Mongolia,MNG,2702520,3232430
@@ -209,11 +209,11 @@ Series Name,Series Code,Country Name,Country Code,2010,2019
 "Population, total",SP.POP.TOTL,Uruguay,URY,3352651,3428409
 "Population, total",SP.POP.TOTL,Uzbekistan,UZB,28562400,33580350
 "Population, total",SP.POP.TOTL,Vanuatu,VUT,245453,304404
-"Population, total",SP.POP.TOTL,"Venezuela, RB",VEN,28715022,28971683
+"Population, total",SP.POP.TOTL,Venezuela,VEN,28715022,28971683
 "Population, total",SP.POP.TOTL,Viet Nam,VNM,87411012,95776716
 "Population, total",SP.POP.TOTL,Virgin Islands (U.S.),VIR,108357,106669
 "Population, total",SP.POP.TOTL,West Bank and Gaza,PSE,3786161,4685306
-"Population, total",SP.POP.TOTL,"Yemen, Rep.",YEM,24743946,31546691
+"Population, total",SP.POP.TOTL,Yemen,YEM,24743946,31546691
 "Population, total",SP.POP.TOTL,Zambia,ZMB,13792086,18380477
 "Population, total",SP.POP.TOTL,Zimbabwe,ZWE,12839771,15354608
 "Population, total",SP.POP.TOTL,Africa Eastern and Southern,AFE,523459657,667242986
