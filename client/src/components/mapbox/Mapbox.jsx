@@ -3,6 +3,8 @@ import { useEffect, useState, useContext } from "react";
 import format from "../../utils/geoJsonProcessor";
 import { Context } from "../../context/context";
 import Sidebar from "../Sidebar";
+import roundToNearestK from "../../utils/roundToNearestK";
+import getPopulation from "../../utils/getPopulation";
 
 const API_KEY = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
@@ -10,6 +12,7 @@ export default function Mapbox() {
   const [geoJson, setGeoJson] = useState(null);
   const [maxValue, setMaxValue] = useState(0);
   const { year, setYear } = useContext(Context);
+  const [population, setPopulation] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
 
   useEffect(() => {
@@ -49,10 +52,18 @@ export default function Mapbox() {
     },
   };
 
-  const onClick = (event) => {
+  const onClick = async (event) => {
+    setPopulation(null);
     const feature = event.features && event.features[0];
     setSelectedCountry(feature);
+
+    const res = await getPopulation(feature.properties.ADMIN);
+    setPopulation(res[0].population);
   };
+
+  useEffect(() => {
+    (async () => {})();
+  }, [selectedCountry]);
 
   return (
     <div className="h-screen w-screen">
@@ -75,6 +86,40 @@ export default function Mapbox() {
         {selectedCountry && (
           <Sidebar>
             <h1>{selectedCountry.properties.ADMIN}</h1>
+            <h2>Statistics</h2>
+            <div className="stats stats-vertical shadow-text/30 shadow">
+              <div className="stat">
+                <div className="stat-title">Population</div>
+                <div className="stat-value">
+                  {population ? `${population}K` : "Getting..."}
+                </div>
+                <div className="stat-desc">As of 2023</div>
+              </div>
+
+              <div className="stat">
+                <div className="stat-title">Total Plastic Waste 2019</div>
+                <div className="stat-value">
+                  {roundToNearestK(selectedCountry.properties["2019"])} kgs
+                </div>
+              </div>
+
+              <div className="stat">
+                <div className="stat-title">Total Plastic Waste {year}</div>
+                <div className="stat-value">
+                  {roundToNearestK(selectedCountry.properties[year])} kgs
+                </div>
+                <div className="stat-desc">
+                  ↗︎
+                  {(
+                    (selectedCountry.properties[year] /
+                      selectedCountry.properties["2019"]) *
+                      100 -
+                    100
+                  ).toFixed(2)}
+                  %
+                </div>
+              </div>
+            </div>
           </Sidebar>
         )}
       </Map>
