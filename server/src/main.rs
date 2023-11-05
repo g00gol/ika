@@ -42,6 +42,7 @@ async fn post_route(body: web::Json<PostBody>, df: web::Data<Mutex<DataFrame>>) 
 
     Ok(HttpResponse::Ok()
        // We put the hack in hackathon
+        .header("Access-Control-Allow-Headers", "*")
         .header("Access-Control-Allow-Origin", "*")
        .json(serde_json::to_value(lf_years_emitted.collect().unwrap())?))
 
