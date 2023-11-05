@@ -80,7 +80,7 @@ fn main() -> () {
  */
 
     let lf_country: LazyFrame = lf_2010_country
-                                .outer_join(lf_2019_country, col("Entity"), col("Entity"))
+                                .inner_join(lf_2019_country, col("Entity"), col("Entity"))
                                 .select(&[col("Entity"),
                                            col("Code"),
                                            col("Continent"),
