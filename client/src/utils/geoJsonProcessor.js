@@ -52,7 +52,11 @@ const format = async (endYear) => {
       };
     }
   });
-  return updated;
+
+  return {
+    type: "FeatureCollection",
+    features: updated,
+  };
 };
 
 export default format;
