@@ -1,10 +1,20 @@
 import Map, { Source, Layer } from "react-map-gl";
+import { useEffect, useState } from "react";
+
 import format from "../../utils/geoJsonProcessor";
 
 const API_KEY = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
 export default function Mapbox() {
-  const geoJson = format();
+  const [geoJson, setGeoJson] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const data = await format();
+      console.log(data);
+      setGeoJson(data);
+    })();
+  }, []);
 
   return (
     <div className="h-screen w-screen">
