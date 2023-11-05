@@ -13,7 +13,7 @@ struct PostBody {
 async fn post(body: web::Json<PostBody>, df: web::Data<Mutex<DataFrame>>) -> impl Responder {
 
     let expressions: Vec<Expr> = (2020..(body.year+1))
-        .map(|y| col(format!("{} Total Emitted", y-1).as_str())
+        .map(|y| col("2019 Total Emitted")
                       .alias(format!("{} Total Emitted", y).as_str())
                       +col("Change Per Year")*lit(y-2019)
                       ).collect();
